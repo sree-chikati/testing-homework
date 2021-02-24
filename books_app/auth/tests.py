@@ -98,7 +98,7 @@ class AuthTests(TestCase):
         # - Make a POST request to /login, sending a username & password
         post_data = {
             'username': 'notreal',
-            'password': 'notreal'
+            'password': 'notreal2'
         }
         response = self.app.post('/login', data = post_data)
         # - Check that the login form is displayed again, with an appropriate
