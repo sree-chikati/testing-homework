@@ -4,7 +4,7 @@ import unittest
 from datetime import date
  
 from books_app import app, db, bcrypt
-from books_app.models import Book, Author, User, Audience
+from books_app.models import Book, Author, Genre, User, Audience
 
 """
 Run these tests with the command:
@@ -229,7 +229,7 @@ class MainTests(unittest.TestCase):
         create_user()
         login(self.app, 'me1', 'password')
         # TODO: Verify that the genre was updated in the database
-         post_data = {
+        post_data = {
             'name': 'Comedy'
         }
         self.app.post('/create_genre', data = post_data)
